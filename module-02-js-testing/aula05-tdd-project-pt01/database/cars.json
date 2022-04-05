@@ -1,0 +1,16 @@
+[
+	{
+		"id": "b471c2b1-84c7-4b63-b76f-a9eb6ca8f028",
+		"name": "Camaro",
+		"releaseYear": 2021,
+		"available": true,
+		"gasAvailable": true
+	},
+	{
+		"id": "06c4bda6-094a-468b-af1b-24c82a06a1a8",
+		"name": "Durango",
+		"releaseYear": 2021,
+		"available": true,
+		"gasAvailable": true
+	}
+]
