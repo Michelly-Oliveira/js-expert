@@ -20,7 +20,7 @@ deepStrictEqual(array.__proto__, Array.prototype);
 console.log('func.__proto__ === Function.prototype', func.__proto__ === Function.prototype);
 deepStrictEqual(func.__proto__, Function.prototype);
 
-// __proto__ of Object.protory is null
+// __proto__ of Object.prototype is null
 // in the end, everything in js inherits from null
 // obj.__proto__.__proto__ = Object.__proto__
 console.log('obj.__proto__.__proto__ === null', obj.__proto__.__proto__ === null);
@@ -43,14 +43,13 @@ function Manager() {}
 Manager.prototype = Object.create(Supervisor.prototype);
 Manager.prototype.monthlyBonus = () => 'monthlyBonus**';
 
-// We can access an inherited prop/method through the protoyype, using .protoype.prop
+// We can access an inherited prop/method through the prototype, using .prototype.prop
 console.log('Manager.prototype.salary()', Manager.prototype.salary());
-// but we can't access that same prop/method through the protoyype, without using .protoype
+// but we can't access that same prop/method, without using .protoype
 // console.log('Manager.salary()', Manager.salary());
 
 // if we don't call with 'new', the frist __proto__ is always an intance of the explicit
-// function of the parent (in this case, Function, because our classes were created
-// as functions), it doesn't inrehit from our classes
+// function of the parent (Object), it doesn't inrehit from our classes
 // But we can access the classes with inrehitance using .prototype
 console.log(
 	'Manager.prototype.__proto__ === Supervisor.prototype',
@@ -59,7 +58,7 @@ console.log(
 deepStrictEqual(Manager.prototype.__proto__, Supervisor.prototype);
 
 // prototype => where methods/props are kept ('object itself')
-// __proto__ => reference used in the lookup chain, reference to the 'parent'
+// __proto__ => reference used in the lookup chain, reference to the 'parent' prototype
 // Manager.prototype = Manager props/methods
 // Manager.prototype.__proto__ = Manager's parent = Supervisor.prototype = Supervisor
 
